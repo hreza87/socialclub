@@ -28,8 +28,10 @@
         </div>
 
         <div class="card-footer text-body-secondary">
+            {% if user.is_authenticated %}
             <a href="{% url 'update-event' event.id %}" class="btn btn-outline-secondary btn-sm">Update Event</a>
             <a href="{% url 'delete-event' event.id %}" class="btn btn-outline-danger btn-sm">Delete Event</a>
+            {% endif %}
           </div>
         
     </div>
