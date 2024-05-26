@@ -20,4 +20,13 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('events.urls')),
+    path('members/', include('django.contrib.auth.urls')),
+    path('members/', include('members.urls')),
+    
 ]
+
+#Configure admin titles
+
+admin.site.site_header = "Social Club Administration"
+admin.site.site_title="Browser Title"
+admin.site.index_title="Welcom to Social Club Admin area"
